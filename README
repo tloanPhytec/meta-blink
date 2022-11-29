@@ -1,1 +1,3 @@
 This Yocto Meta Layer was validated with BSP-Yocto-TISDK-AM64x-ALPHA2 and the phyCORE-AM64x
+
+BSP-Yocto-TISDK-AM64x-ALPHA2 uses Yocto version 3.1.12 Dunfell
