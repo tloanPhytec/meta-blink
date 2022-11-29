@@ -12,7 +12,10 @@ SRC_URI_append = " 		\
 	file://blink.service 	\
 "
 
-FILES_${PN} += "${systemd_unitdir}/system/blink.service"
+FILES_${PN} += "				\
+	${systemd_unitdir}/system/blink.service \
+	${bindir}/blink				\
+"
 
 do_compile() {
          ${CC} ${WORKDIR}/blink.c -o ${WORKDIR}/blink
