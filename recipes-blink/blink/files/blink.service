@@ -1,0 +1,15 @@
+[Unit]
+Description=Cafe Yocto Blink Service
+After=basic.target
+
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/devmem2 0x000F4048 w 0x00010007
+ExecStart=/usr/bin/blink
+ExecStopPost=/usr/bin/killall blink
+RemainAfterExit=no
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
